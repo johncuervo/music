@@ -1,0 +1,15 @@
+<div class="container", style="width:90%; background-color:#A4A4A4; margin-top: 30px; margin-bottom: 30px; padding: 25px; border: 10px double white;">
+ <div class="row">
+   <% @artists.each do |artist| %>
+     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 foto-artista shadow">
+       <div class="card", style="margin: 10px; padding: 10px; border: 2px solid red;">
+         <img class="card-img-top" src=<%= artist.image_url %> alt=<%= artist.name %> height="200px">
+         <div class="card-body">
+           <h4 class="card-title", style="text-align: center;  font-style: italic;"><%= artist.name %></h4>
+           <%= link_to  "Detalles", artist_path(artist), class: "btn btn-primary btn-sm btn-block" %>
+         </div>
+       </div>
+     </div>
+   <% end %>
+ </div>
+</div>
